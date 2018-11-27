@@ -18,11 +18,14 @@ class UserList extends Component {
 
     return (
       <Fragment>
-        {users.userList.map((user) => (
+        {users.loading ?
+        <span style={{ fontSize: '30px' }}>Loading...</span>  
+        :
+        users.userList.map((user) => (
           <UserInput
             user={user}
             cart={cart}
-            key={user.uid}
+            key={user.id}
           />
         ))}
       </Fragment>

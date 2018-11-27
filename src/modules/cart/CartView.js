@@ -18,12 +18,12 @@ function Cart(props) {
           </h3>
       }
       <div>
-        {cart.items.map((user) => (
-          <div style={{ width: '300px' }} key={user.uid}>
+        {cart.items.map((cartEntry) => (
+          <div style={{ width: '300px' }} key={cartEntry.id}>
             <span>
-              {user.bigName}
+              {cartEntry.object.bigName}
             </span>
-            <button style={{ float: 'right' }} onClick={() => cart.onRemoveFromCart(user)}>X</button>
+            <button style={{ float: 'right' }} onClick={() => cart.onRemoveFromCart(cartEntry)}>X</button>
           </div>
         ))}
       </div>

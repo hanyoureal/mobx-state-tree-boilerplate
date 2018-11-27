@@ -2,7 +2,7 @@ import { types } from  'mobx-state-tree'
 
 const User = types
   .model('user', {
-    uid: types.identifier,
+    id: types.identifier,
     name: types.string,
   })
   .actions((self) => ({
